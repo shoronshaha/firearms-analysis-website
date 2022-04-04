@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
     return (
         <div>
-            <div className='flex gap-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center'>
                 <div className='border-2'>
                     <h1 className='text-6xl m-10 text-green-500'>FIRE ARMS</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam earum voluptas commodi dolor aspernatur exercitationem enim. Aut fugit atque alias, earum quisquam at, non modi fuga, maxime fugiat laboriosam!</p>
@@ -12,7 +12,7 @@ const Home = () => {
                     </button>
                 </div>
                 <div className='border-2'>
-                    <img className='w-50' src="https://raw.githubusercontent.com/mir-hussain/guns/main/guns/Browning.png" alt="" />
+                    <img className='w-38' src="https://raw.githubusercontent.com/mir-hussain/guns/main/guns/Browning.png" alt="" />
                 </div>
 
             </div>
