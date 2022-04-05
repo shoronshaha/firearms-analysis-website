@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import Review from '../Data/Review';
+import React from 'react';
+import useReview from '../Hooks/useReview';
+import Review from '../Review/Review';
 
 const Reviews = () => {
-    const [reviews, setReviews] = useState([])
+    const [reviews, setReviews] = useReview();
 
-    useEffect(() => {
-        fetch("reviews.json")
-            .then(res => res.json())
-            .then(data => setReviews(data))
-    }, [])
     return (
         <div className='px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2'>
             <p className='text-center text-5xl font-bold text-black text-bold mb-10'><span className='text-purple-500'>Customers </span> <span className='text-orange-500'>Reviews</span>  </p>

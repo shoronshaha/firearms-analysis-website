@@ -1,96 +1,16 @@
 import React from 'react';
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import useData from '../Hooks/useData';
 
 const Dashboard = () => {
-    const data = [
-        {
-            "id": 1,
-            "month": "Mar",
-            "investment": 100000,
-            "sell": 2410,
-            "revenue": 104010
-        },
-        {
-            "id": 2,
-            "month": "Apr",
-            "investment": 200000,
-            "sell": 4230,
-            "revenue": 245000
-        },
-        {
-            "id": 3,
-            "month": "May",
-            "investment": 500000,
-            "sell": 72060,
-            "revenue": 670100
-        },
-        {
-            "id": 4,
-            "month": "Jun",
-            "investment": 500000,
-            "sell": 529000,
-            "revenue": 404050
-        },
-        {
-            "id": 5,
-            "month": "Jul",
-            "investment": 600000,
-            "sell": 60100,
-            "revenue": 509000
-        },
-        {
-            "id": 6,
-            "month": "Aug",
-            "investment": 700000,
-            "sell": 6700,
-            "revenue": 61000
-        }
-    ];
-    const data2 = [
-        {
-            "id": 1,
-            "month": "Mar",
-            "investment": 1007000,
-            "sell": 2410,
-            "revenue": 104010
-        },
-        {
-            "id": 2,
-            "month": "Apr",
-            "investment": 2000700,
-            "sell": 4230,
-            "revenue": 245000
-        },
-        {
-            "id": 3,
-            "month": "May",
-            "investment": 5007000,
-            "sell": 72060,
-            "revenue": 670100
-        },
-        {
-            "id": 4,
-            "month": "Jun",
-            "investment": 5700000,
-            "sell": 529000,
-            "revenue": 404050
-        },
-        {
-            "id": 5,
-            "month": "Jul",
-            "investment": 8007000,
-            "sell": 60100,
-            "revenue": 509000
-        },
-        {
-            "id": 6,
-            "month": "Aug",
-            "investment": 7007000,
-            "sell": 6700,
-            "revenue": 61000
-        }
+    const [data, setData] = useData();
+    const data1 = [];
+    const data2 = [];
 
-    ]
+    data.map(info => {
+        data1.push({ "month": info.month, "investment": info.investment });
+        data2.push({ "month": info.month, "revenue": info.revenue });
+    })
 
 
     return (
@@ -101,8 +21,8 @@ const Dashboard = () => {
                 <div className='mb-10 '>
                     <h1 className='text-3xl text-center'>Line Charts</h1>
                     <LineChart width={350} height={400} data={data}>
-                        <Line dataKey={'revenue'}></Line>
-                        <Line dataKey={'sell'}></Line>
+                        <Line type="monotone" dataKey={'revenue'} stroke="blue"></Line>
+                        <Line type="monotone" dataKey={'sell'} stroke="green"></Line>
                         <XAxis dataKey={'month'}></XAxis>
                         <YAxis dataKey={'investment'}></YAxis>
                         <Tooltip></Tooltip>
@@ -112,9 +32,9 @@ const Dashboard = () => {
                 <div className='mb-10'>
                     <h1 className='text-3xl text-center'>PieChart</h1>
                     <PieChart width={350} height={400}>
-                        <Pie data={data} dataKey="revenue" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+                        <Tooltip />
+                        <Pie data={data1} dataKey="investment" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
                         <Pie data={data2} dataKey="revenue" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
-                        <Tooltip></Tooltip>
                     </PieChart>
                 </div>
 
