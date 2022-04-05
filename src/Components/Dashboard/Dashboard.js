@@ -16,7 +16,7 @@ const Dashboard = () => {
     return (
 
         <div>
-            <h1 className='text-5xl text-center text-cyan-600 font-bold mb-10'>DASHBOARD</h1>
+            <h1 className='text-5xl text-center text-green-500 font-bold mb-10'>DASHBOARD</h1>
             <div className='grid grid-col-1 md:grid-cols-2 gap-10 m-1 justify-items-center'>
                 <div className='mb-10 '>
                     <h1 className='text-3xl text-center'>Line Charts</h1>

@@ -9,7 +9,7 @@ const About = () => {
                     <p className='mt-5 text-[30px] text-purple-700 font-bold'>Junior Developer</p>
                 </div>
                 <div className=''>
-                    <img className='w-[300px]' src="/image/profile4.jpg" alt="" />
+                    <img className='w-[300px] rounded-full' src="/image/profile4.jpg" alt="" />
                 </div>
 
             </div>

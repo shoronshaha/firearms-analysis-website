@@ -4,7 +4,7 @@ const Blogs = () => {
     return (
 
         <div>
-            <h1 className='text-5xl text-center text-cyan-600 font-bold'>BLOGS</h1>
+            <h1 className='text-5xl text-center text-green-500 font-bold'>BLOGS</h1>
             <div className='justify-items-center mt-10 grid sm:grid-cols-1 md:grid-cols-3'>
 
                 <div className='rounded-lg shadow-lg bg-gray-100 max-w-sm p-5 h-[450px] w-[350px] hover:bg-blue-50 mx-2 mb-5'>
