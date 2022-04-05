@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import Rifle from '../Rifle/Rifle';
+import Review from '../Data/Review';
 
 const Reviews = () => {
-    const [rifles, setRifles] = useState([])
+    const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch("rifle.json")
+        fetch("reviews.json")
             .then(res => res.json())
-            .then(data => setRifles(data))
+            .then(data => setReviews(data))
     }, [])
     return (
         <div className='px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2'>
             <p className='text-center text-3xl font-bold text-black'>All The Arms Reviews</p>
             <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center'>
                 {
-                    rifles.map(rifle => <Rifle
-                        key={rifle.id}
-                        rifle={rifle}
-                    ></Rifle>)
+                    reviews.map(review => <Review
+                        key={review.id}
+                        review={review}
+                    ></Review>)
                 }
             </div>
         </div>
