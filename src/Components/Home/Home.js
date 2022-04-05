@@ -4,10 +4,10 @@ const Home = () => {
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center m-10'>
-                <div className=''>
-                    <h1 className='text-6xl m-10 text-green-500'>FIRE ARMS</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam earum voluptas commodi dolor aspernatur exercitationem enim. Aut fugit atque alias, earum quisquam at, non modi fuga, maxime fugiat laboriosam!</p>
-                    <button className="mt-36 bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full">
+                <div className='m-10'>
+                    <h1 className='text-6xl text-green-500'>FIRE ARMS</h1>
+                    <p className='mt-5'>A FireArm having a long barrel with a spirally grooved interior, which imparts to the bullet spinning motion and thus greater accuracy over a longer range!</p>
+                    <button className="mt-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full">
                         Button
                     </button>
                 </div>
@@ -18,7 +18,7 @@ const Home = () => {
             </div>
 
             <div>
-                <h1 className='text-6xl text-green-500 my-20'>All Reviews(3)</h1>
+                <h1 className='text-6xl text-green-500 text-center'>All Reviews(3)</h1>
             </div>
 
         </div>

@@ -8,11 +8,11 @@ const Navbar = () => {
                 </CustomLink>
             </div>
             <div className='flex gap-2 text-xl'>
-                <CustomLink to='/'>Home</CustomLink>
-                <CustomLink to='/reviews'>Reviews</CustomLink>
-                <CustomLink to='/dashboard'>Dashboard</CustomLink>
-                <CustomLink to='/blogs'>Blogs</CustomLink>
-                <CustomLink to='/about'>About</CustomLink>
+                <CustomLink to='/'>HOME</CustomLink>
+                <CustomLink to='/reviews'>REVIEWS</CustomLink>
+                <CustomLink to='/dashboard'>DASHBOARD</CustomLink>
+                <CustomLink to='/blogs'>BLOGS</CustomLink>
+                <CustomLink to='/about'>ABOUT</CustomLink>
             </div>
         </div>
     )
