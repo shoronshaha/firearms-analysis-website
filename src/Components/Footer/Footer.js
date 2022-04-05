@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className='bg-rose-900  w-full py-8 mt-8'>
+        <footer className='bg-rose-800  w-full py-8 mt-8'>
             <div className='max-w-screen-xl mx-auto px-4'>
                 <div className=' flex max-w-xs mx-auto items-center justify-between'>
                     <a
@@ -82,7 +82,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className='text-center text-white font-bold pt-10 sm:pt-12 flex items-center justify-center'>
-                    All Rights Reserved By &copy; Crypto Cafe | 2022-2026
+                    All Rights Reserved By &copy; FireArms | 2022-2023
                 </div>
             </div>
         </footer>
